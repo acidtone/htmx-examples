@@ -1,0 +1,18 @@
+---
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro + HTMX</title>
+		<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+	</head>
+	<body>
+		<h1>Hello, World!</h1>
+		<button hx-get="/users" hx-target="#user-list" hx-trigger="click">Load Users</button>
+		<div id="user-list"></div>
+	</body>
+</html>

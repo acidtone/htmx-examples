@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go + HTMX</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <button hx-get="/users" hx-target="#user-list" hx-trigger="click">Load Users</button>
+    <div id="user-list"></div>
+</body>
+</html>

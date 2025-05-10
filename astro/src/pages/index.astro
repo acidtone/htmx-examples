@@ -8,11 +8,22 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro + HTMX</title>
+		<style>
+			.loading {
+				display: none;
+			}
+			
+			.htmx-request.loading {
+				display: inline;
+			}
+			</style>
 		<script src="https://unpkg.com/htmx.org@1.9.10"></script>
 	</head>
 	<body>
 		<h1>Hello, World!</h1>
-		<button hx-get="/users" hx-target="#user-list" hx-trigger="click">Load Users</button>
-		<div id="user-list"></div>
+		<button hx-get="/users" hx-target="#user-list" hx-indicator="#spinner">Load Users</button>
+		<ul id="user-list"></ul>
+		<div id="spinner" class="loading">Loading...</div>
+		<div id="load-users" hx-swap-oob="true"></div>
 	</body>
 </html>

@@ -1,5 +1,5 @@
-<ul>
-    {% for user in users %}
-        <li>{{ user.name }} - {{ user.email }}</li>
-    {% endfor %}
-</ul>
+{% for user in users %}
+<li>{{ user.name }} - {{ user.email }}</li>
+{% endfor %}
+<div id="load-users" hx-get="/users" hx-target="#user-list" hx-swap="beforeend" hx-indicator="#spinner"
+    hx-trigger="revealed"></div>
